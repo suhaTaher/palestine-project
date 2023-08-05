@@ -5,11 +5,14 @@ import React from 'react';
 //import 'react-slideshow-image/dist/styles.css'
 import Styling from '../Styling';
 import TimedSlideshow from 'react-native-timed-slideshow';
+//import WordingButton from './Components/wordingButton';
 
 //var Dimentions =require('Dimentions');
 const Width=Dimensions.get('window').width;
 const Hight=Dimensions.get('window').height;
 
+const note='Contrary to popular belief, Lorem ';
+const note2='Ipsum is not simply';
  const slideImages = [
     {
       url: '../images/1.jpg',
@@ -38,16 +41,20 @@ export default function Welcome({items}) {
         </ImageBackground>
         
         <View style={[Styling.overlay,{flex:1,height:Hight,width:Width,backgroundColor:'black',opacity:.4,position:'absolute'}]}></View>
-         <View style={[Styling.container,{position:'absolute', left:Width*.4,top:Hight*.2}]} >   
-         <Image style={{width:75,height:75}} source={require('../images/logo300.png')} ></Image>
-         <View style={{alignItems:'center'}}>
-          <Text >Explore</Text>
-          <Text>Palestine</Text>
-
-        </View>
+           <View style={[Styling.container,{position:'absolute', }]} >   
+              <Image style={{width:75,height:75,left:Width*.4,top:Hight*.21}} source={require('../images/logo300.png')} ></Image>
+              <View style={{alignItems:'center',width:Width,top:Hight*.3}}>
+                <Text style={{fontSize:35,color:'white' }}>Explore</Text>
+                <Text style={{fontSize:40, color:'#13E301',top:-15}} >Palestine</Text>
+                <View Style={{backgroundColor:'red'}}>
+                   <Text style={{color:'white',textAlign:'center',marginTop:20}}>{note}</Text>
+                   <Text style={{color:'white',textAlign:'center',}}>{note2}</Text>
+                </View>
+                {/*<WordButton color={'E35601'} title={'Get Started'} fontSize={'20'}/>*/}
+             </View>
              {/*<TimedSlideshow items={items} />*/} 
-          </View>
-
+            </View>
+ 
     </SafeAreaView>
   );
 }

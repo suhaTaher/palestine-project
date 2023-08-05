@@ -12,7 +12,7 @@ const Hight=Dimensions.get('window').height;
 
 
 
-export default function WordButton({color, text   ,FontSize }) { // recomended radious 45
+export default function WordingButton({color, text   ,FontSize }) { // recomended radious 45
     const FSize=eval(FontSize);
   return (
     
