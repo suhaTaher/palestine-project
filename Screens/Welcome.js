@@ -25,7 +25,6 @@ const Hight=Dimensions.get('window').height;
       },
 ];
 
-
 export default function Welcome() {
   return (
     <SafeAreaView style={Styling.container}>
