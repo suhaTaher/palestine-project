@@ -38,6 +38,7 @@ export default function Welcome({items}) {
           <View style={[Styling.container,{position:'absolute', left:Width*.4,top:Hight*.2}]} >   
              <Image style={{width:75,height:75}} source={require('../images/logo300.png')} ></Image>
              {/*<TimedSlideshow items={items} />*/}
+             
            </View>
         </ImageBackground>
         <View style={[Styling.overlay,{flex:1,height:Hight,width:Width,backgroundColor:'black',opacity:.4,position:'absolute'}]}></View>
