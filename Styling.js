@@ -3,7 +3,8 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
+      backgroundColor: 'black',
+      borderColor:'red',
 
     },
     image: {
@@ -19,5 +20,9 @@ const styles = StyleSheet.create({
         opacity:0.5,
         backgroundColor:'red',
     },
+    borders: {
+        borderStyle:'dashedq',
+        borderColor:'red'
+    }
 
   });
