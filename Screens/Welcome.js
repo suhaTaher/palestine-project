@@ -1,11 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text,ImageBackground, View, SafeAreaView ,Image,Dimensions} from 'react-native';
 import React from 'react';
-
 //import 'react-slideshow-image/dist/styles.css'
 import Styling from '../Styling';
 import TimedSlideshow from 'react-native-timed-slideshow';
-//import WordingButton from './Components/wordingButton';
+import WordingButton from '../Components/WordingButton';
 
 //var Dimentions =require('Dimentions');
 const Width=Dimensions.get('window').width;
@@ -50,7 +49,10 @@ export default function Welcome({items}) {
                    <Text style={{color:'white',textAlign:'center',marginTop:20}}>{note}</Text>
                    <Text style={{color:'white',textAlign:'center',}}>{note2}</Text>
                 </View>
-                {/*<WordButton color={'E35601'} title={'Get Started'} fontSize={'20'}/>*/}
+                <View style={{marginTop:110 }}>
+                    <WordingButton colors={'#E35601'}  FontSize1={'30'} text={'Get Started..'} />
+                </View>
+                
              </View>
              {/*<TimedSlideshow items={items} />*/} 
             </View>
