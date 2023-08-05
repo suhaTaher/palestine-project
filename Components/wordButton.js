@@ -12,12 +12,12 @@ const Hight=Dimensions.get('window').height;
 
 
 
-export default function FilledButton({color, text , BWidth ,radius  }) { // recomended radious 45
-  const wid=eval(BWidth);
+export default function WordButton({color, text   ,FontSize }) { // recomended radious 45
+    const FSize=eval(FontSize);
   return (
-
-    <View style={[styles.Button,{width:wid*Width,borderRadius:radius, backgroundColor:color}]}>
-        <Button color='white' title={text} ></Button>
+    
+    <View style={styles.Button}>
+        <Button color={color} title={text} FontSize={FSize}></Button>
     </View>    
    
   );
