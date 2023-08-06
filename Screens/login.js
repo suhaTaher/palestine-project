@@ -1,5 +1,5 @@
 import React , {useState}from 'react';
-import { StyleSheet, Text, View, Button, TextInput ,ImageBackground ,Image} from 'react-native';
+import { StyleSheet, Text, View, Button, TextInput ,ImageBackground ,Image,Alert,TouchableOpacity} from 'react-native';
 import { AntDesign } from '@expo/vector-icons'; 
 import FButton from '../Components/FilledButton';
 
@@ -8,7 +8,7 @@ export default function LogIn() {
   const [email, onChangeEmail] = useState('email');
   const [password, onChangePassword] = useState('password');
 
- 
+
   return (
     <View style={styles.container}>
    <ImageBackground source={require('../images/5.jpg')} resizeMode="cover" style={styles.image}>
@@ -21,8 +21,15 @@ export default function LogIn() {
 
       <Text style={styles.login}>Log In</Text>
 
-      <FButton color={"#E35601"} text={"Local guid"}  BWidth={300} radius={50} BHeight={65} Tsize={25}/>
-      <FButton color={"#E35601"} text={"Tourist"}  BWidth={300} radius={50} BHeight={65} Tsize={25}/>
+      <TouchableOpacity >
+    <View style={[styles.Button,{ width:300,backgroundColor:'#CDCDCD',borderRadius:50,height:65}]}>
+        
+      <Text style={[styles.Btext,{fontSize:25}]}>Local guid</Text>
+       
+    </View>    
+    </TouchableOpacity>
+      
+      <FButton color={"#E35601"} text={"Tourist"}  BWidth={300} radius={50} BHeight={65} Tsize={25} />
        
        <Text  style={styles.fp} >sign up as a Local Guid</Text>
        </View>
@@ -35,6 +42,10 @@ export default function LogIn() {
 }
 
 const styles = StyleSheet.create({
+  Btext:{
+    color :'#fff',
+    textAlign:'center',
+  },
   logocon:{
     paddingTop: 50,
     justifyContent:'center',
@@ -79,6 +90,17 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         lineHeight:64.05
       },
+          Button:{
+      textAlign:'center',
+      position: 'relative',
+      height: 45,
+      margin: 15,
+      padding: 15,
+      borderColor:'#E35601',
+      borderWidth:1.5,
+      color:'#E35601',
+     
+    },
 
   });
 
