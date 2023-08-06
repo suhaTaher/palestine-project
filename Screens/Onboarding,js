@@ -26,14 +26,18 @@ export default function Welcome({items}) {
 
 
   return (
-     <SafeAreaView style={Styling.container}>
-        <ImageBackground 
-        source={require('../images/2.jpg')} 
-        resizeMode={'cover'} 
-        style={{flex:1,width:'100%'}}   > 
-            </ImageBackground>
-            
-            <View style={[Styling.overlay,{flex:1,height:Hight,width:Width,backgroundColor:'black',opacity:.4,position:'absolute'}]}></View>
+    <View>
+               <ScrollView 
+        ref={(scrollView) => { _scrollView = scrollView; }}
+        horizontal={true} pagingEnabled={true} 
+        >
+          <Image source={require('../images/1.jpg')} style={{height, width}} />
+          <Image source={require('../images/2.jpg')} style={{height, width}} />
+          <Image source={require('../images/3.jpg')} style={{height, width}} />
+          <Image source={require('../images/4.jpg')} style={{height, width}} />
+       </ScrollView>
+
+       <View style={[Styling.overlay,{flex:1,height:Hight,width:Width,backgroundColor:'black',opacity:.4,position:'absolute'}]}></View>
             <View style={[Styling.container,{position:'absolute', }]} >   
                 <Image style={{width:75,height:75,left:Width*.4,top:Hight*.21}} source={require('../images/logo300.png')} ></Image>
                 <View style={{alignItems:'center',width:Width,top:Hight*.3}}>
@@ -50,8 +54,11 @@ export default function Welcome({items}) {
                 </View>
                 {/*<TimedSlideshow items={items} />*/}
                 </View>
-    
-  </SafeAreaView>
+
+
+
+
+    </View>
 
 
 

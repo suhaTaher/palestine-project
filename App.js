@@ -3,7 +3,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import FilledButton from './Components/FilledButton';
 import BorderedButton from './Components/BorderedButton';
 import Welcome from './Screens/Welcome';
-
+import Slides from './Navigators/Slides';
+import photoSlide from './PhotoSlide';
 const slideImages = [
   {
     url: '../images/1.jpg',
@@ -27,7 +28,8 @@ export default function App() {
     <View style={styles.container}>
      { /*<BorderedButton ColorBorder={'#E35601'} text={'login'} BWidth={'0.5'} radius={45} BackColor={'white'}/>*/}
      {/*<FilledButton color={'#E35601'} text={'login'} BWidth={'0.5'} radius={45} />*/}
-     <Welcome items={slideImages}/>
+     {/*<Welcome items={slideImages}/>*/}
+     <Slides items={photoSlide.url}/>
       <StatusBar style="auto" />
     </View>
   );
