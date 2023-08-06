@@ -4,7 +4,7 @@ import FilledButton from './Components/FilledButton';
 import BorderedButton from './Components/BorderedButton';
 import Welcome from './Screens/Welcome';
 import Onboarding from './Screens/Onboarding.js';
-import photoSlide from './PhotoSlide';
+import inputFields from './Components/inputFields';
 const slideImages = [
   {
     url: '../images/1.jpg',
@@ -28,8 +28,8 @@ export default function App() {
     <View style={styles.container}>
      { /*<BorderedButton ColorBorder={'#E35601'} text={'login'} BWidth={'0.5'} radius={45} BackColor={'white'}/>*/}
      {/*<FilledButton color={'#E35601'} text={'login'} BWidth={'0.5'} radius={45} />*/}
-     {/*<Welcome items={slideImages}/>*/}
-     <Onboarding/>
+     {/*<Onboarding />*/}
+     <inputFields color={'black'} text={'login'} BWidth={'0.5'} radius={45}/>
       <StatusBar style="auto" />
     </View>
   );
