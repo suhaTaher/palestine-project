@@ -8,26 +8,24 @@ export default function Signin() {
   const [email, onChangeEmail] = useState('email');
   const [password, onChangePassword] = useState('password');
 
+ 
   return (
     <View style={styles.container}>
    <ImageBackground source={require('../images/5.jpg')} resizeMode="cover" style={styles.image}>
-   
-   <View style={styles.icon} >
-   <AntDesign  name="left" size={50} color="white"  />
-   </View>
-
    <View style={styles.container2}>
       <Text style={styles.text}>welcome back</Text>
       <Text style={styles.sign}>Sign In</Text>
       <TextInput style={styles.input} placeholder='email' onChangeText={onChangeEmail} value={email}/>
        <TextInput style={styles.input} placeholder='password' onChangeText={onChangePassword} value={password}/>
-    <FButton color={"#E35601"} text={"Sign In"}  BWidth={"94%"} radius={45}/>
+    <FButton color={"#E35601"} text={"Sign In"}  BWidth={"94%"} radius={45} BHeight={45} Tsize={13}/>
        
        <Text  style={styles.fp} >forgot password</Text>
        </View>
       
     </ImageBackground>
- 
+    <View style={styles.icon} >
+   <AntDesign  name="left" size={45} color="white"  />
+   </View>
     </View>
   
   );
@@ -35,16 +33,20 @@ export default function Signin() {
 
 const styles = StyleSheet.create({
   icon:{
-    marginTop:-1,
-    marginLeft:0,
+    marginTop:40,
+    marginLeft:10,
+    padding:5,
     position: 'absolute',
   },
     container: {
       flex: 1,
+    position:'relative',
+
     },
     container2: {
         padding:'9%',
         justifyContent: 'center',
+        
       },
     image: {
         flex: 1,
