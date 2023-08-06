@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     },
     in:{
       padding:5,
-      position:'absolute'
+
     
     }
 

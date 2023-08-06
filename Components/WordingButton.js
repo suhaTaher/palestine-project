@@ -1,11 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, Button,Dimensions,Text} from 'react-native';
+import { StyleSheet, View, Button,Dimensions,Text,TouchableOpacity} from 'react-native';
 import React from 'react';
 //import 'react-slideshow-image/dist/styles.css'
 import Styling from '../Styling';
 
-const Width=Dimensions.get('window').width;
-const Hight=Dimensions.get('window').height;
+const BWidth=Dimensions.get('window').width;
+const BHeight=Dimensions.get('window').height;
 
 
 export default function WordingButton({colors, text   ,FontSize1 }) { // recomended radious 45
@@ -13,16 +13,23 @@ export default function WordingButton({colors, text   ,FontSize1 }) { // recomen
 
   return (
     
-    <View style={{padding:10}} >
-         <Text style={{fontSize:FSize,color:colors }}>{text}</Text>
+
+<TouchableOpacity style={{padding:10}}  >
+    <View style={[styles.Button,{opacity:1}]}>
+        
+    <Text style={{fontSize:FSize,color:colors }}>{text}</Text>
+      
+       
     </View>    
+    </TouchableOpacity>
+
    
   );
 }
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
+  flex:1,
       backgroundColor: '#fff',
     },
 

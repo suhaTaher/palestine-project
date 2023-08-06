@@ -15,11 +15,11 @@ const Hight=Dimensions.get('window').height;
 export default function BorderedButton({ColorBorder, text , BWidth ,radius , BackColor }) { // recomended radious 45
   const wid=eval(BWidth);
   return (
-
+<View style={{margin:5}}>
     <View style={[styles.Button,{width:wid*Width,borderRadius:radius, borderColor:ColorBorder,borderWidth:1,backgroundColor:BackColor}]}>
         <Button color={ColorBorder} title={text} ></Button>
     </View>    
-   
+    </View>
   );
 }
 
@@ -31,8 +31,9 @@ const styles = StyleSheet.create({
     },
     Button:{
       padding:5,
-      position:'absolute',
+ 
       opacity:.53
+      
     }
 
 
