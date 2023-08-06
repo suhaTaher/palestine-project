@@ -1,7 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View, Button,Dimensions} from 'react-native';
 import React from 'react';
-import { Slide } from 'react-slideshow-image';
 //import 'react-slideshow-image/dist/styles.css'
 import Styling from '../Styling';
 
@@ -38,7 +37,3 @@ const styles = StyleSheet.create({
 
 
   });
-
-
-
-

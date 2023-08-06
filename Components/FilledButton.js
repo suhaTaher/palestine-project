@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, Button,Dimensions} from 'react-native';
-import React from 'react';
-import { Slide } from 'react-slideshow-image';
+import { StyleSheet, View,Text,Dimensions,TouchableOpacity,Alert} from 'react-native';
+import React , {useState}from 'react';
+
 //import 'react-slideshow-image/dist/styles.css'
 import Styling from '../Styling';
 
@@ -10,35 +10,41 @@ const Width=Dimensions.get('window').width;
 const Hight=Dimensions.get('window').height;
 
 
+export default function FilledButton({color, text , BWidth ,radius,BHeight ,Tsize}) { // recomended radious 45
 
-
-
-export default function FilledButton({color, text , BWidth ,radius  }) { // recomended radious 45
-  const wid=eval(BWidth);
   return (
-
-    <View style={[styles.Button,{width:wid*Width,borderRadius:radius, backgroundColor:color}]}>
-        <Button color='white' title={text} ></Button>
+<TouchableOpacity >
+    <View style={[styles.Button,{ width:BWidth,backgroundColor:color,borderRadius:radius,height:BHeight}]}>
+        
+      <Text style={[styles.Text,{fontSize:Tsize}]}>{text}</Text>
+       
     </View>    
-   
+    </TouchableOpacity>
   );
 }
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-
-    },
+ 
     Button:{
-      padding:5,
-      position:'absolute'
-    
+      textAlign:'center',
+      position: 'relative',
+      height: 45,
+      margin: 15,
+      padding: 15,
+     
+    },
+    Buttonhover:{
+      textAlign:'center',
+      position: 'relative',
+      height: 45,
+      margin: 15,
+      padding: 15,
+      opacity:'0.5',
+     
+    },
+    Text:{
+      color :'#fff',
+      textAlign:'center',
     }
 
-
   });
-
-
-
-

@@ -9,11 +9,15 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@expo/vector-icons": "^13.0.0",
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/react-native-fontawesome": "^0.3.0",
+    "@react-navigation/bottom-tabs": "^6.5.8",
     "expo": "~49.0.5",
     "expo-status-bar": "~1.6.0",
+    "expo-updates": "~0.18.11",
     "react": "18.2.0",
-    "react-native": "0.72.3",
-    "react-slideshow-image": "^4.2.1"
+    "react-native": "0.72.3"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
