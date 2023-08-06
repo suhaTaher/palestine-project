@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Button, TextInput ,ImageBackground } from 'reac
 import { AntDesign } from '@expo/vector-icons'; 
 import FButton from '../Components/FilledButton';
 
-export default function Signin() {
+export default function SignIn() {
 
   const [email, onChangeEmail] = useState('email');
   const [password, onChangePassword] = useState('password');
