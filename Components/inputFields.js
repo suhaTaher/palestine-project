@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, Button,Dimensions} from 'react-native';
+import { StyleSheet, View,Dimensions,TextInput} from 'react-native';
 import React from 'react';
 //import 'react-slideshow-image/dist/styles.css'
 import Styling from '../Styling';
@@ -12,12 +12,12 @@ const Hight=Dimensions.get('window').height;
 
 
 
-export default function WordButton({color, text   ,FontSize }) { // recomended radious 45
-    const FSize=eval(FontSize);
+export default function InputFields ({color, text , BWidth ,radius  }) { // recomended radious 45
+  const wid=eval(BWidth);
   return (
-    
-    <View style={styles.Button}>
-        <Button color={color} title={text} FontSize={FSize}></Button>
+
+    <View style={[styles.in,{width:wid*Width,borderRadius:radius, backgroundColor:color,opacity:.3}]}>
+        <TextInput  color='yellow' placeholder={text} ></TextInput>
     </View>    
    
   );
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
       backgroundColor: '#fff',
 
     },
-    Button:{
+    in:{
       padding:5,
       position:'absolute'
     
