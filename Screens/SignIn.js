@@ -1,9 +1,9 @@
 import React , {useState}from 'react';
-import { StyleSheet, Text, View, Button, TextInput ,ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, Button, TextInput ,ImageBackground,TouchableOpacity } from 'react-native';
 import { AntDesign } from '@expo/vector-icons'; 
 import FButton from '../Components/FilledButton';
 
-export default function SignIn() {
+export default function Signin() {
 
   const [email, onChangeEmail] = useState('email');
   const [password, onChangePassword] = useState('password');
@@ -23,9 +23,13 @@ export default function SignIn() {
        </View>
       
     </ImageBackground>
+  
     <View style={styles.icon} >
+    <TouchableOpacity>
    <AntDesign  name="left" size={45} color="white"  />
+   </TouchableOpacity>
    </View>
+  
     </View>
   
   );
@@ -83,3 +87,4 @@ const styles = StyleSheet.create({
       },
 
   });
+
